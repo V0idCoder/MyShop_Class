@@ -91,7 +91,7 @@ class ProductsProvider with ChangeNotifier {
   }
 
   Future<void> insertProduct(int index, Product product) async {
-    final newProduct = await dbService.updateProduct(product);
+    final newProduct = await dbService.addProduct(product);
     _items.insert(index, newProduct);
     notifyListeners();
   }

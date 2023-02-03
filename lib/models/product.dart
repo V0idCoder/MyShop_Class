@@ -6,7 +6,7 @@ class Product {
   final String imageUrl;
 
   Product(
-      {required this.id,
+      {this.id,
       required this.title,
       required this.description,
       required this.price,
@@ -22,6 +22,21 @@ class Product {
       imageUrl: '',
     );
   }
+
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+        title: json['title'],
+        description: json['description'],
+        price: json['price'].toDouble(),
+        imageUrl: json['imageUrl']);
+  }
+
+  Map<String, dynamic> toJson() => {
+        'title': title,
+        'description': description,
+        'price': price,
+        'imageUrl': imageUrl
+      };
 
   Product copyWith({
     String? id,

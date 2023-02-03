@@ -16,7 +16,7 @@ class ProductDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(loadedProduct.title)),
-      body: Container(),
+      body: const Text('Hello World!'),
     );
   }
 }

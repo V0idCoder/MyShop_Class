@@ -100,7 +100,7 @@ class _AddEditProductScreenState extends State<AddEditProductScreen> {
         Navigator.of(context).pop();
       }
     } else {
-      //Nouveau produit
+      //Nouveau produit (Add New Product)
       try {
         await Provider.of<ProductsProvider>(context, listen: false)
             .addProduct(_editedProduct);
